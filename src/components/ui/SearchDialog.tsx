@@ -90,7 +90,7 @@ export function SearchDialog({ open, onClose }: { open: boolean; onClose: () => 
                             ))
                         ) : (
                             <div className="px-4 py-8 text-center text-sm text-muted-foreground/50 font-mono">
-                                Ingen treff for &ldquo;{query}&rdquo;
+                                Ingen treff for «{query}»
                             </div>
                         )}
                     </div>

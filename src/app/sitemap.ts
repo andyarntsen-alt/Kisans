@@ -3,7 +3,7 @@ import { GUIDES } from '@/lib/guides';
 
 const BASE_URL = 'https://kisans.no';
 
-const CATEGORY_SLUGS = ['koding', 'jobb', 'skole', 'verktoy'];
+const CATEGORY_SLUGS = ['koding', 'jobb', 'skole', 'verktoy', 'chatboter', 'kreativitet', 'forsta-ai', 'trender'];
 
 export default function sitemap(): MetadataRoute.Sitemap {
     const guideEntries = GUIDES.map((guide) => ({
@@ -20,6 +20,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
         priority: 0.9,
     }));
 
+    const staticPages = [
+        { url: `${BASE_URL}/om-oss`, priority: 0.5 },
+        { url: `${BASE_URL}/nyhetsbrev`, priority: 0.6 },
+        { url: `${BASE_URL}/personvern`, priority: 0.3 },
+    ].map((page) => ({
+        ...page,
+        lastModified: new Date(),
+        changeFrequency: 'monthly' as const,
+    }));
+
     return [
         {
             url: BASE_URL,
@@ -28,6 +38,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
             priority: 1,
         },
         ...categoryEntries,
+        ...staticPages,
         ...guideEntries,
     ];
 }
