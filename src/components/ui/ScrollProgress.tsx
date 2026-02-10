@@ -4,9 +4,8 @@ import { useEffect, useState } from "react";
 
 const SECTIONS = [
     { id: "hero", label: "01" },
-    { id: "intro", label: "02" },
-    { id: "kategorier", label: "03" },
-    { id: "guider", label: "04" },
+    { id: "kategorier", label: "02" },
+    { id: "guider", label: "03" },
 ];
 
 export function ScrollProgress() {
@@ -14,18 +13,13 @@ export function ScrollProgress() {
 
     useEffect(() => {
         const update = () => {
-            const scrollY = window.scrollY;
             const vh = window.innerHeight;
 
-            // Find which section we're in based on scroll position
-            const positions = SECTIONS.map((s) => {
-                const el = document.getElementById(s.id);
-                return el ? el.offsetTop : Infinity;
-            });
-
+            // Use getBoundingClientRect for accurate position with GSAP pinning
             let current = 0;
-            for (let i = positions.length - 1; i >= 0; i--) {
-                if (scrollY >= positions[i] - vh * 0.5) {
+            for (let i = SECTIONS.length - 1; i >= 0; i--) {
+                const el = document.getElementById(SECTIONS[i].id);
+                if (el && el.getBoundingClientRect().top <= vh * 0.5) {
                     current = i;
                     break;
                 }

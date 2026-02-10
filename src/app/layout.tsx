@@ -6,7 +6,6 @@ import { ThemeProvider } from "@/components/providers/ThemeProvider";
 import { Vignette } from "@/components/ui/Vignette";
 import { CookieConsent } from "@/components/ui/CookieConsent";
 import { Analytics } from "@/components/providers/Analytics";
-import { ScrollProgress } from "@/components/ui/ScrollProgress";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -68,7 +67,6 @@ export default function RootLayout({
         <ThemeProvider>
           <SmoothScroll>
             <Vignette />
-            <ScrollProgress />
             <main className="relative min-h-screen">
               {children}
             </main>

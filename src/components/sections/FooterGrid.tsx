@@ -102,17 +102,14 @@ export function FooterGrid() {
                 ))}
             </div>
 
-            <div className="col-span-full border-t border-border p-6 md:p-12 flex flex-col gap-8 md:flex-row justify-between items-start md:items-end">
-                <div>
-                    <h1 className="text-6xl md:text-9xl font-bold text-foreground/5 select-none">KISANS</h1>
-                </div>
+            <div className="col-span-full border-t border-border p-6 md:p-12 flex justify-end">
                 <div className="text-right space-y-2 font-mono text-xs text-muted-foreground">
                     <div className="flex gap-4 mb-4">
                         <Link href="/personvern" className="hover:text-foreground transition-colors">PERSONVERN</Link>
                         <Link href="/om-oss" className="hover:text-foreground transition-colors">OM OSS</Link>
                     </div>
                     <p>&copy; 2026 KISANS</p>
-                    <p>DER MENNESKE MØTER AI</p>
+                    <p>MENNESKE MØTER KUNSTIG INTELLIGENS</p>
                 </div>
             </div>
         </section>

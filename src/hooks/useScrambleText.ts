@@ -58,9 +58,10 @@ export function useScrambleText({
           
           // Higher progress = higher chance of locking in specific char, 
           // biased by index to create left-to-right wave effect
-          const bias = (index / length); 
-          // If progress is far enough past the bias, lock it
-          if (progress > bias + (1 - speed) * 0.2) return char;
+          // Lock chars left-to-right, but ensure all chars scramble visibly first
+          const offset = (1 - speed) * 0.5;
+          const bias = index / length;
+          if (progress > offset + bias * (1 - offset)) return char;
 
           // Otherwise random char
           return CHARS[Math.floor(Math.random() * CHARS.length)];

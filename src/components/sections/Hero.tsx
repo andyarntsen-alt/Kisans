@@ -88,12 +88,12 @@ export function Hero() {
                 </h1>
 
                 <div className="text-base md:text-xl font-mono text-white/80 uppercase tracking-[0.2em] hero-fade-in flex flex-col gap-2">
-                    <ScrambleText text="Der menneske møter" duration={1500} speed={0.3} trigger={titleDone} className="font-mono" />
+                    <ScrambleText text="menneske møter" duration={1500} speed={0.3} trigger={titleDone} className="font-mono" />
                     <ScrambleText text="kunstig intelligens" duration={1800} speed={0.3} trigger={titleDone} className="font-mono" />
                 </div>
 
-                <Link href="#guider" className="hero-fade-in mt-4 px-8 py-3 border border-white/30 hover:bg-white/10 text-sm font-mono tracking-widest text-white/90 hover:text-white transition-all">
-                    SE GUIDER
+                <Link href="#kategorier" className="hero-fade-in mt-4 px-8 py-3 border border-white/30 hover:bg-white/10 text-sm font-mono tracking-widest text-white/90 hover:text-white transition-all">
+                    UTFORSK
                 </Link>
 
                 <div className="absolute bottom-12 left-0 right-0 hero-fade-in">
