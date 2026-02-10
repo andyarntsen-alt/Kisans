@@ -68,7 +68,7 @@ export function HorizontalScroll() {
 
     if (isMobile) {
         return (
-            <section className="bg-background/50 backdrop-blur-sm border-t border-border/30">
+            <section id="kategorier" className="bg-background/50 backdrop-blur-sm border-t border-border/30">
                 <div className="flex flex-col">
                     {CARDS.map((card) => (
                         <div key={card.id} className="border-b border-border/30 px-6 py-16">
@@ -98,7 +98,7 @@ export function HorizontalScroll() {
     }
 
     return (
-        <section ref={triggerRef} className="relative overflow-hidden h-screen bg-background/50 backdrop-blur-sm">
+        <section id="kategorier" ref={triggerRef} className="relative overflow-hidden h-screen bg-background/50 backdrop-blur-sm">
             <div
                 ref={sectionRef}
                 className="h-full flex flex-row w-[400vw]"

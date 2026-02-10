@@ -22,7 +22,7 @@ export function IntroStats() {
     }, []);
 
     return (
-        <section ref={ref} className="border-t border-border/30 py-24 md:py-32">
+        <section id="intro" ref={ref} className="border-t border-border/30 py-24 md:py-32">
             <div className="max-w-3xl mx-auto px-6 text-center space-y-6">
                 <h2
                     className="intro-fade text-3xl md:text-5xl font-bold tracking-tight text-foreground"

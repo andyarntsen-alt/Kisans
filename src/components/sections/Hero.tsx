@@ -38,7 +38,7 @@ export function Hero() {
     }, []);
 
     return (
-        <section ref={containerRef} className="relative h-screen flex flex-col justify-center items-center px-6 overflow-hidden">
+        <section id="hero" ref={containerRef} className="relative h-screen flex flex-col justify-center items-center px-6 overflow-hidden">
             {/* Background: optimized image on mobile (36KB), video on desktop (2MB) */}
             <div className="absolute inset-0 z-0">
                 {isMobile ? (
