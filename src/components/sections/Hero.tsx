@@ -84,7 +84,7 @@ export function Hero() {
 
             <div className="z-10 flex flex-col items-center text-center max-w-4xl mx-auto space-y-8">
                 <h1 className="text-4xl md:text-7xl lg:text-9xl font-bold tracking-tighter text-white mix-blend-difference hero-fade-in uppercase" style={{ fontFamily: 'var(--font-serif), serif' }}>
-                    <ScrambleText text="Kisans" duration={1800} speed={0.4} className="block" onComplete={handleTitleComplete} />
+                    <ScrambleText text="KI SANS" duration={1800} speed={0.4} className="block" onComplete={handleTitleComplete} />
                 </h1>
 
                 <div className="text-base md:text-xl font-mono text-white/80 uppercase tracking-[0.2em] hero-fade-in flex flex-col gap-2">
