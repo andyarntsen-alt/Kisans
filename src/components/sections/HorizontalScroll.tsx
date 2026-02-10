@@ -84,12 +84,8 @@ export function HorizontalScroll() {
             <section className="bg-background/50 backdrop-blur-sm border-t border-border/30">
                 <div className="flex flex-col">
                     {CARDS.map((card) => (
-                        <div key={card.id} className="border-b border-border/30 px-6 py-16 relative">
-                            <div className="absolute top-6 left-6 text-7xl font-bold text-foreground/5 font-mono select-none">
-                                {card.id}
-                            </div>
-
-                            <div className="space-y-6 z-10 relative">
+                        <div key={card.id} className="border-b border-border/30 px-6 py-16">
+                            <div className="space-y-6">
                                 <div className="flex items-center gap-4 text-xs font-mono text-primary">
                                     <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
                                     KATEGORI {card.id}
