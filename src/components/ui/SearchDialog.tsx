@@ -49,10 +49,10 @@ export function SearchDialog({ open, onClose }: { open: boolean; onClose: () => 
     if (!open) return null;
 
     return (
-        <div className="fixed inset-0 z-[100] flex items-start justify-center pt-[10vh] md:pt-[15vh]" onClick={onClose}>
+        <div className="fixed inset-0 z-[100] flex items-start justify-center pt-[15vh] md:pt-[20vh]" onClick={onClose}>
             <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" />
             <div
-                className="relative w-full max-w-xl mx-4 bg-card border border-border overflow-hidden"
+                className="relative w-full max-w-xl mx-6 bg-card border border-border overflow-hidden max-h-[70vh]"
                 onClick={e => e.stopPropagation()}
             >
                 <div className="flex items-center border-b border-border px-4">
