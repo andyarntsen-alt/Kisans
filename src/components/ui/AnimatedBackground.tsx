@@ -17,8 +17,10 @@ export function AnimatedBackground() {
         let width = window.innerWidth;
         let height = window.innerHeight;
         let animationFrameId: number;
+        let lastTime = 0;
+        const interval = 1000 / 30; // 30 FPS is enough for slow-drifting stars
 
-        const starCount = isMobile ? 50 : 150;
+        const starCount = isMobile ? 50 : 80;
         const stars = Array.from({ length: starCount }).map(() => ({
             x: Math.random() * width,
             y: Math.random() * height,
@@ -34,7 +36,12 @@ export function AnimatedBackground() {
             canvas.height = height;
         };
 
-        const animate = () => {
+        const animate = (time: number) => {
+            animationFrameId = requestAnimationFrame(animate);
+
+            if (time - lastTime < interval) return;
+            lastTime = time;
+
             ctx.clearRect(0, 0, width, height);
 
             stars.forEach(star => {
@@ -49,13 +56,11 @@ export function AnimatedBackground() {
                 ctx.arc(star.x, star.y, star.size, 0, Math.PI * 2);
                 ctx.fill();
             });
-
-            animationFrameId = requestAnimationFrame(animate);
         };
 
         window.addEventListener('resize', resize);
         resize();
-        animate();
+        animationFrameId = requestAnimationFrame(animate);
 
         return () => {
             window.removeEventListener('resize', resize);
@@ -66,7 +71,7 @@ export function AnimatedBackground() {
     return (
         <div className="fixed inset-0 -z-10 bg-black overflow-hidden pointer-events-none">
             <div
-                className="absolute inset-0 opacity-40 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))]"
+                className="absolute inset-0 opacity-40"
                 style={{
                     backgroundImage: 'radial-gradient(circle at 50% 50%, #0a1f44 0%, #000 60%)',
                 }}
@@ -75,9 +80,9 @@ export function AnimatedBackground() {
             <canvas ref={canvasRef} className="absolute inset-0 opacity-40 mix-blend-screen" role="presentation" aria-hidden="true" />
 
             {!isMobile && (
-                <div className="absolute top-[-50%] left-[-50%] w-[200%] h-[200%] animate-slow-spin opacity-30">
-                    <div className="absolute top-[30%] left-[20%] w-[40vw] h-[40vw] rounded-full bg-blue-900/20 blur-[100px]" />
-                    <div className="absolute bottom-[30%] right-[20%] w-[50vw] h-[50vw] rounded-full bg-indigo-900/20 blur-[120px]" />
+                <div className="absolute top-[-50%] left-[-50%] w-[200%] h-[200%] animate-slow-spin opacity-30 will-change-transform">
+                    <div className="absolute top-[30%] left-[20%] w-[40vw] h-[40vw] rounded-full bg-blue-900/20 blur-[80px]" />
+                    <div className="absolute bottom-[30%] right-[20%] w-[50vw] h-[50vw] rounded-full bg-indigo-900/20 blur-[80px]" />
                 </div>
             )}
             <div className="absolute inset-0 opacity-[0.03] pointer-events-none mix-blend-overlay"

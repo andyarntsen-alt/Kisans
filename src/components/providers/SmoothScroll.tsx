@@ -22,14 +22,8 @@ export function SmoothScroll({ children }: { children: ReactNode }) {
             orientation: 'vertical',
             gestureOrientation: 'vertical',
             smoothWheel: true,
+            autoRaf: true,
         });
-
-        function raf(time: number) {
-            lenis.raf(time);
-            requestAnimationFrame(raf);
-        }
-
-        requestAnimationFrame(raf);
 
         return () => {
             lenis.destroy();
