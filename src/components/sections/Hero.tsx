@@ -39,11 +39,11 @@ export function Hero() {
 
     return (
         <section ref={containerRef} className="relative h-screen flex flex-col justify-center items-center px-6 overflow-hidden">
-            {/* Background: image on mobile (253KB), video on desktop (2MB) */}
+            {/* Background: optimized image on mobile (36KB), video on desktop (2MB) */}
             <div className="absolute inset-0 z-0">
                 {isMobile ? (
                     <img
-                        src="/hero/Whisk_iwy3ctnibtyxyzyl1czygtotgdz3qtlkrznx0cz.jpeg"
+                        src="/hero/hero-mobile.jpg"
                         alt=""
                         className="w-full h-full object-cover"
                     />

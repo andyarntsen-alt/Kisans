@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 
 export function useIsMobile() {
-    const [isMobile, setIsMobile] = useState(false);
+    // Default to true (mobile-first) so SSR/static HTML never includes heavy desktop assets
+    const [isMobile, setIsMobile] = useState(true);
 
     useEffect(() => {
         const mql = window.matchMedia('(max-width: 767px)');
