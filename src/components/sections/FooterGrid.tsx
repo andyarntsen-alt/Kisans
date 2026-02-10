@@ -13,7 +13,7 @@ const HOMEPAGE_CATEGORIES = [
         title: 'AI for Koding',
         desc: 'Verktøy for å skrive, feilsøke og forbedre kode med AI.',
         href: '/kategori/koding',
-        count: 5,
+        count: 6,
     },
     {
         id: '03',
