@@ -23,6 +23,23 @@ import { lokalAi } from './lokal-ai';
 import { aiSikkerhet } from './ai-sikkerhet';
 import { aiTrender } from './ai-trender';
 import { kimi } from './kimi';
+import { deepseek } from './deepseek';
+import { grok } from './grok';
+import { byggAiChatbot } from './bygg-ai-chatbot';
+import { aiLyd } from './ai-lyd';
+import { openaiApi } from './openai-api';
+import { anthropicApi } from './anthropic-api';
+import { aiVideo } from './ai-video';
+import { mistral } from './mistral';
+import { windsurf } from './windsurf';
+import { replit } from './replit';
+import { supabaseAi } from './supabase-ai';
+import { claudeSkole } from './claude-skole';
+import { byggAiAgent } from './bygg-ai-agent';
+import { aiSkriving } from './ai-skriving';
+import { googleAiApi } from './google-ai-api';
+import { vercelAiSdk } from './vercel-ai-sdk';
+import { stripeAi } from './stripe-ai';
 
 export const GUIDES: Guide[] = [
     chatgpt,
@@ -47,6 +64,23 @@ export const GUIDES: Guide[] = [
     aiSikkerhet,
     aiTrender,
     kimi,
+    deepseek,
+    grok,
+    byggAiChatbot,
+    aiLyd,
+    openaiApi,
+    anthropicApi,
+    aiVideo,
+    mistral,
+    windsurf,
+    replit,
+    supabaseAi,
+    claudeSkole,
+    byggAiAgent,
+    aiSkriving,
+    googleAiApi,
+    vercelAiSdk,
+    stripeAi,
 ];
 
 export function getGuideBySlug(slug: string): Guide | undefined {

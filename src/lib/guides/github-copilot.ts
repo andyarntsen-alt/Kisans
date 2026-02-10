@@ -12,7 +12,7 @@ export const githubCopilot: Guide = {
     sections: [
         {
             heading: 'Hva er GitHub Copilot?',
-            content: 'GitHub Copilot er en AI-assistent som hjelper deg å skrive kode raskere. Den sitter inne i editoren din og foreslår kode mens du skriver, omtrent som autokorrektur for programmering. Du begynner å skrive en funksjon, og Copilot fullfører den basert på konteksten i filen og prosjektet ditt.\n\nCopilot støtter de fleste populære editorer: VS Code, Visual Studio, JetBrains-produkter som IntelliJ og PyCharm, Neovim, og Eclipse. De fleste bruker det i VS Code, der opplevelsen er best.'
+            content: 'GitHub Copilot er en AI-assistent som hjelper deg å skrive kode raskere, tilgjengelig på github.com/features/copilot. Den sitter inne i editoren din og foreslår kode mens du skriver, omtrent som autokorrektur for programmering. Du begynner å skrive en funksjon, og Copilot fullfører den basert på konteksten i filen og prosjektet ditt.\n\nCopilot støtter de fleste populære editorer: VS Code, Visual Studio, JetBrains-produkter som IntelliJ og PyCharm, Neovim, og Eclipse. De fleste bruker det i VS Code, der opplevelsen er best.'
         },
         {
             heading: 'Gratisplanen: Mer enn du tror',
@@ -20,7 +20,7 @@ export const githubCopilot: Guide = {
         },
         {
             heading: 'Pro og Pro+',
-            content: 'Pro koster 10 dollar i måneden og gir deg ubegrenset kodekomplettering og 300 premium-forespørsler. Det er planen de fleste profesjonelle utviklere bruker. Du får tilgang til Copilot Chat, kodeanmeldelser, og valg mellom flere AI-modeller.\n\nPro+ koster 39 dollar i måneden og øker premium-forespørslene til 1500. Du får også tilgang til de kraftigste modellene som Claude Opus 4 og OpenAI o3. Denne planen er for utviklere som bruker Copilot intensivt og vil ha de beste modellene tilgjengelig.\n\nFor team er det Business-planen til 19 dollar per bruker per måned, og Enterprise til 39 dollar som inkluderer egne modeller og kunnskapsbaser.'
+            content: 'Pro koster 10 dollar i måneden og gir deg ubegrenset kodekomplettering og 300 premium-forespørsler. Det er planen de fleste profesjonelle utviklere bruker. Du får tilgang til Copilot Chat, kodeanmeldelser, og valg mellom flere AI-modeller.\n\nPro+ koster 39 dollar i måneden og øker premium-forespørslene til 1500. Du får også tilgang til de kraftigste modellene som Claude Opus 4.6 og OpenAI o3. Denne planen er for utviklere som bruker Copilot intensivt og vil ha de beste modellene tilgjengelig.\n\nFor team er det Business-planen til 19 dollar per bruker per måned, og Enterprise til 39 dollar som inkluderer egne modeller og kunnskapsbaser.'
         },
         {
             heading: 'Slik kommer du i gang i VS Code',

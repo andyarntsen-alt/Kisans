@@ -1,8 +1,36 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import type { Metadata } from 'next';
+import type { ReactNode } from 'react';
 import { getGuideBySlug, getAllSlugs, GUIDES, type Guide } from '@/lib/guides';
 import { ThemeToggle } from '@/components/ui/ThemeToggle';
+
+function linkify(text: string): ReactNode[] {
+    const urlRegex = /(https?:\/\/[^\s.,;:!?)]+(?:[.,;:!?)]+[^\s.,;:!?)]+)*|(?:[a-zA-Z0-9-]+\.)+(?:com|ai|io|no|dev|org|net)(?:\/[^\s.,;:!?)]*(?:[.,;:!?)]+[^\s.,;:!?)]+)*)?)/g;
+    const parts: ReactNode[] = [];
+    let lastIndex = 0;
+    let match;
+
+    while ((match = urlRegex.exec(text)) !== null) {
+        if (match.index > lastIndex) {
+            parts.push(text.slice(lastIndex, match.index));
+        }
+        const url = match[0];
+        const href = url.startsWith('http') ? url : `https://${url}`;
+        parts.push(
+            <a key={match.index} href={href} target="_blank" rel="noopener noreferrer" className="text-primary underline hover:text-primary/80 transition-colors">
+                {url}
+            </a>
+        );
+        lastIndex = urlRegex.lastIndex;
+    }
+
+    if (lastIndex < text.length) {
+        parts.push(text.slice(lastIndex));
+    }
+
+    return parts.length > 0 ? parts : [text];
+}
 
 interface PageProps {
     params: Promise<{ slug: string }>;
@@ -133,7 +161,7 @@ export default async function GuidePage({ params }: PageProps) {
                                 </h2>
                                 <div className="text-base md:text-lg text-muted-foreground leading-relaxed space-y-4">
                                     {section.content.split('\n\n').map((paragraph, j) => (
-                                        <p key={j}>{paragraph}</p>
+                                        <p key={j}>{linkify(paragraph)}</p>
                                     ))}
                                 </div>
                             </section>

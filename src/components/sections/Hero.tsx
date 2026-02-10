@@ -75,6 +75,9 @@ export function Hero() {
                             <path d="m21 21-4.3-4.3" />
                         </svg>
                     </button>
+                    <Link href="/start-her" className="hidden md:inline font-mono text-sm tracking-widest text-white/70 hover:text-white transition-colors uppercase">
+                        Start her
+                    </Link>
                     <Link href="/nyhetsbrev" className="hidden md:inline font-mono text-sm tracking-widest text-white/70 hover:text-white transition-colors uppercase">
                         Nyhetsbrev
                     </Link>
@@ -92,8 +95,8 @@ export function Hero() {
                     <ScrambleText text="kunstig intelligens" duration={1800} speed={0.3} trigger={titleDone} className="font-mono" />
                 </div>
 
-                <Link href="#kategorier" className="hero-fade-in mt-4 px-8 py-3 border border-white/30 hover:bg-white/10 text-sm font-mono tracking-widest text-white/90 hover:text-white transition-all">
-                    UTFORSK
+                <Link href="#guider" className="hero-fade-in mt-4 px-8 py-3 border border-white/30 hover:bg-white/10 text-sm font-mono tracking-widest text-white/90 hover:text-white transition-all">
+                    SE GUIDER
                 </Link>
 
                 <div className="absolute bottom-12 left-0 right-0 hero-fade-in">

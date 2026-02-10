@@ -1,6 +1,6 @@
 "use client";
 
-import { ReactNode, useEffect } from "react";
+import { ReactNode, useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
 import Lenis from "lenis";
 import { useIsMobile } from "@/hooks/useIsMobile";
@@ -8,10 +8,7 @@ import { useIsMobile } from "@/hooks/useIsMobile";
 export function SmoothScroll({ children }: { children: ReactNode }) {
     const pathname = usePathname();
     const isMobile = useIsMobile();
-
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, [pathname]);
+    const lenisRef = useRef<Lenis | null>(null);
 
     useEffect(() => {
         if (isMobile) return;
@@ -25,10 +22,21 @@ export function SmoothScroll({ children }: { children: ReactNode }) {
             autoRaf: true,
         });
 
+        lenisRef.current = lenis;
+
         return () => {
             lenis.destroy();
+            lenisRef.current = null;
         };
     }, [isMobile]);
+
+    useEffect(() => {
+        if (lenisRef.current) {
+            lenisRef.current.scrollTo(0, { immediate: true });
+        } else {
+            window.scrollTo(0, 0);
+        }
+    }, [pathname]);
 
     return <>{children}</>;
 }

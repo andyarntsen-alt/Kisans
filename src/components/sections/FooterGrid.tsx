@@ -2,18 +2,25 @@ import Link from "next/link";
 
 const HOMEPAGE_CATEGORIES = [
     {
+        id: '✦',
+        title: 'Start her',
+        desc: 'Ny til AI? Fire steg for å komme i gang.',
+        href: '/start-her',
+        count: null,
+    },
+    {
         id: '01',
-        title: 'Chatboter & Assistenter',
-        desc: 'ChatGPT, Gemini, Perplexity, Kimi og andre AI-assistenter.',
+        title: 'ChatGPT, Claude & co',
+        desc: 'Guider til de mest populære AI-assistentene.',
         href: '/kategori/chatboter',
-        count: 4,
+        count: 7,
     },
     {
         id: '02',
         title: 'AI for Koding',
         desc: 'Verktøy for å skrive, feilsøke og forbedre kode med AI.',
         href: '/kategori/koding',
-        count: 6,
+        count: 7,
     },
     {
         id: '03',
@@ -27,14 +34,14 @@ const HOMEPAGE_CATEGORIES = [
         title: 'AI for Skole',
         desc: 'Bruk AI smart og etisk i studiene.',
         href: '/kategori/skole',
-        count: 2,
+        count: 3,
     },
     {
         id: '05',
         title: 'Bilder & Kreativitet',
-        desc: 'Bildegenerering, prompting og kreativ bruk av AI.',
+        desc: 'Bildegenerering, video, lyd og kreativ bruk av AI.',
         href: '/kategori/kreativitet',
-        count: 2,
+        count: 5,
     },
     {
         id: '06',
@@ -50,6 +57,13 @@ const HOMEPAGE_CATEGORIES = [
         href: '/kategori/trender',
         count: 3,
     },
+    {
+        id: '08',
+        title: 'Bygg med AI',
+        desc: 'API-er, chatboter og praktiske prosjekter med AI.',
+        href: '/kategori/bygg-med-ai',
+        count: 8,
+    },
 ];
 
 export function FooterGrid() {
@@ -64,7 +78,7 @@ export function FooterGrid() {
                         className="aspect-[4/3] border-b border-r border-border p-8 flex flex-col justify-between hover:bg-accent/50 transition-colors group"
                     >
                         <div className="font-mono text-xs text-muted-foreground">
-                            {cat.id} · {cat.count} GUIDER
+                            {cat.id}{cat.count !== null ? ` · ${cat.count} GUIDER` : ' · NY TIL AI?'}
                         </div>
                         <div className="space-y-2">
                             <h3 className="text-2xl font-bold text-foreground group-hover:text-primary transition-colors">
@@ -88,7 +102,7 @@ export function FooterGrid() {
                         className="aspect-square border-b border-r border-border p-5 flex flex-col justify-between active:bg-accent/50 transition-colors"
                     >
                         <div className="font-mono text-[10px] text-muted-foreground">
-                            {cat.id} · {cat.count} GUIDER
+                            {cat.id}{cat.count !== null ? ` · ${cat.count} GUIDER` : ' · NY TIL AI?'}
                         </div>
                         <div>
                             <h3 className="text-sm font-bold text-foreground leading-tight">

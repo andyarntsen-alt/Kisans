@@ -24,7 +24,7 @@ export const v0OgBolt: Guide = {
         },
         {
             heading: 'Lovable',
-            content: 'Lovable skiller seg ut med fokus på teamsamarbeid og rask MVP-utvikling. Grensesnittet er chatbasert, der du bygger appen gjennom samtale i stedet for kode.\n\nEn spesielt nyttig funksjon er Supabase-integrasjonen. Lovable kan sette opp databaseskjemaer, autentisering og API-er automatisk gjennom Supabase, noe som betyr at du får en reell backend uten å skrive SQL eller sette opp servere.\n\nGratisplanen gir deg 5 meldinger per dag, nok til å teste plattformen. Pro koster 25 dollar i måneden med private prosjekter og egne domener. Business starter på 50 dollar i måneden.\n\nEn ting å være oppmerksom på er at Lovable bruker et kredittsystem der AI-handlinger bruker ulike mengder kreditter. Tung bruk kan bli dyrt.'
+            content: 'Lovable skiller seg ut med fokus på teamsamarbeid og rask MVP-utvikling, tilgjengelig på lovable.dev. Grensesnittet er chatbasert, der du bygger appen gjennom samtale i stedet for kode.\n\nEn spesielt nyttig funksjon er Supabase-integrasjonen. Lovable kan sette opp databaseskjemaer, autentisering og API-er automatisk gjennom Supabase, noe som betyr at du får en reell backend uten å skrive SQL eller sette opp servere.\n\nGratisplanen gir deg 5 meldinger per dag, nok til å teste plattformen. Pro koster 25 dollar i måneden med private prosjekter og egne domener. Business starter på 50 dollar i måneden.\n\nEn ting å være oppmerksom på er at Lovable bruker et kredittsystem der AI-handlinger bruker ulike mengder kreditter. Tung bruk kan bli dyrt.'
         },
         {
             heading: 'Hvilken bør du velge?',

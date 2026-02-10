@@ -12,7 +12,7 @@ export const codex: Guide = {
     sections: [
         {
             heading: 'Hva er Codex?',
-            content: 'Codex er OpenAIs kodingsagent. Du finner den inne i ChatGPT, som et eget kommandolinjeverktøy, og som en VS Code-utvidelse. Når du gir Codex en oppgave, spinner den opp et eget skybasert miljø der den jobber med koden din helt isolert. Den kan skrive nye funksjoner, fikse feil, svare på spørsmål om kodebasen din, og lage pull requests som du ser gjennom før de merges.\n\nDen nyeste versjonen bruker GPT-5.3-Codex-modellen, som er 25 prosent raskere enn forgjengeren. Den er bygget for å støtte hele livssyklusen til programvareutvikling, fra planlegging og koding til testing og utrulling.'
+            content: 'Codex er OpenAIs kodingsagent, tilgjengelig på openai.com/codex. Du finner den inne i ChatGPT, som et eget kommandolinjeverktøy, og som en VS Code-utvidelse. Når du gir Codex en oppgave, spinner den opp et eget skybasert miljø der den jobber med koden din helt isolert. Den kan skrive nye funksjoner, fikse feil, svare på spørsmål om kodebasen din, og lage pull requests som du ser gjennom før de merges.\n\nDen nyeste versjonen bruker GPT-5.3-Codex-modellen, som er 25 prosent raskere enn forgjengeren. Den er bygget for å støtte hele livssyklusen til programvareutvikling, fra planlegging og koding til testing og utrulling.'
         },
         {
             heading: 'Hva trenger du før du starter?',

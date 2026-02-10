@@ -3,7 +3,7 @@ import { GUIDES } from '@/lib/guides';
 
 const BASE_URL = 'https://kisans.no';
 
-const CATEGORY_SLUGS = ['koding', 'jobb', 'skole', 'verktoy', 'chatboter', 'kreativitet', 'forsta-ai', 'trender'];
+const CATEGORY_SLUGS = ['koding', 'jobb', 'skole', 'verktoy', 'chatboter', 'kreativitet', 'forsta-ai', 'trender', 'bygg-med-ai'];
 
 export default function sitemap(): MetadataRoute.Sitemap {
     const guideEntries = GUIDES.map((guide) => ({
@@ -21,6 +21,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }));
 
     const staticPages = [
+        { url: `${BASE_URL}/start-her`, priority: 0.9 },
+        { url: `${BASE_URL}/verktoy/sammenligning`, priority: 0.8 },
         { url: `${BASE_URL}/om-oss`, priority: 0.5 },
         { url: `${BASE_URL}/nyhetsbrev`, priority: 0.6 },
         { url: `${BASE_URL}/personvern`, priority: 0.3 },

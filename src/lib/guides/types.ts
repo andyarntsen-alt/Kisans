@@ -12,5 +12,5 @@ export interface Guide {
     publishedDate: string;
     sections: GuideSection[];
     relatedSlugs: string[];
-    category: 'koding' | 'jobb' | 'skole' | 'chatboter' | 'kreativitet' | 'forsta-ai' | 'trender';
+    category: 'koding' | 'jobb' | 'skole' | 'chatboter' | 'kreativitet' | 'forsta-ai' | 'trender' | 'bygg-med-ai';
 }

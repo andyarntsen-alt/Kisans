@@ -26,8 +26,8 @@ const CATEGORIES: Record<string, { title: string; description: string }> = {
         description: 'Utforsk de beste AI-verktøyene. ChatGPT, Gemini, Perplexity, Midjourney og flere.',
     },
     chatboter: {
-        title: 'Chatboter & Assistenter',
-        description: 'ChatGPT, Gemini, Perplexity, Kimi og andre AI-assistenter.',
+        title: 'ChatGPT, Claude & co',
+        description: 'Guider til de mest populære AI-assistentene.',
     },
     kreativitet: {
         title: 'Bilder & Kreativitet',
@@ -40,6 +40,10 @@ const CATEGORIES: Record<string, { title: string; description: string }> = {
     trender: {
         title: 'Trender & Nyheter',
         description: 'AI-trender, sikkerhet og verktøyoversikter.',
+    },
+    'bygg-med-ai': {
+        title: 'Bygg med AI',
+        description: 'Praktiske guider for å bygge AI-drevne apper og produkter.',
     },
 };
 

@@ -12,11 +12,11 @@ export const cursor: Guide = {
     sections: [
         {
             heading: 'Hva er Cursor?',
-            content: 'Cursor er en kodeeditor bygget fra grunnen av med AI i kjernen. Den er basert på VS Code, så alt du er vant til derfra fungerer her også. Utvidelser, tastatursnarveier, temaer. Men i tillegg har Cursor AI dypt integrert i hele opplevelsen, fra kodekomplettering til store refaktoreringer.\n\nDet som gjør Cursor annerledes enn å bare installere en AI-utvidelse i VS Code, er at editoren er designet rundt AI-arbeidsflyten. Den forstår hele prosjektet ditt, ikke bare filen du har åpen, og kan gjøre endringer på tvers av flere filer samtidig.'
+            content: 'Cursor er en kodeeditor bygget fra grunnen av med AI i kjernen, tilgjengelig på cursor.com. Den er basert på VS Code, så alt du er vant til derfra fungerer her også. Utvidelser, tastatursnarveier, temaer. Men i tillegg har Cursor AI dypt integrert i hele opplevelsen, fra kodekomplettering til store refaktoreringer.\n\nDet som gjør Cursor annerledes enn å bare installere en AI-utvidelse i VS Code, er at editoren er designet rundt AI-arbeidsflyten. Den forstår hele prosjektet ditt, ikke bare filen du har åpen, og kan gjøre endringer på tvers av flere filer samtidig.'
         },
         {
             heading: 'Priser og planer',
-            content: 'Hobby-planen er gratis og gir deg begrensede daglige kompletteringer og en to ukers prøveperiode med Pro-funksjoner. Det er nok til å teste om Cursor passer for deg.\n\nPro koster 20 dollar i måneden og er det de fleste velger. Du får ubegrenset Tab-komplettering, Agent-modus, Composer, og tilgang til flere AI-modeller. Det inkluderer 500 premium-forespørsler per måned.\n\nBusiness koster 40 dollar per bruker per måned og legger til teamfunksjoner som delt kodebase-indeksering og administrasjon.\n\nUltra til 200 dollar i måneden gir deg maksimal kapasitet for de som bruker Cursor hele dagen.'
+            content: 'Hobby-planen er gratis og gir deg begrensede daglige kompletteringer og en to ukers prøveperiode med Pro-funksjoner. Det er nok til å teste om Cursor passer for deg.\n\nPro koster 20 dollar i måneden og er det de fleste velger. Du får ubegrenset Tab-komplettering, Agent-modus, Composer, og tilgang til flere AI-modeller. Det inkluderer 20 dollar i kreditter per måned som du bruker på ulike AI-modeller.\n\nBusiness koster 40 dollar per bruker per måned og legger til teamfunksjoner som delt kodebase-indeksering og administrasjon.\n\nUltra til 200 dollar i måneden gir deg maksimal kapasitet for de som bruker Cursor hele dagen.'
         },
         {
             heading: 'Tab: Smart kodekomplettering',
