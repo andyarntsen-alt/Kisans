@@ -5,12 +5,14 @@ import Link from 'next/link';
 import { ScrambleText } from '@/components/ui/ScrambleText';
 import { ThemeToggle } from '@/components/ui/ThemeToggle';
 import { SearchDialog } from '@/components/ui/SearchDialog';
+import { useIsMobile } from '@/hooks/useIsMobile';
 import gsap from 'gsap';
 
 export function Hero() {
     const containerRef = useRef<HTMLDivElement>(null);
     const [titleDone, setTitleDone] = useState(false);
     const [searchOpen, setSearchOpen] = useState(false);
+    const isMobile = useIsMobile();
     const handleTitleComplete = useCallback(() => setTitleDone(true), []);
 
     useEffect(() => {
@@ -37,20 +39,27 @@ export function Hero() {
 
     return (
         <section ref={containerRef} className="relative h-screen flex flex-col justify-center items-center px-6 overflow-hidden">
-            {/* Video Background */}
+            {/* Background: image on mobile (253KB), video on desktop (2MB) */}
             <div className="absolute inset-0 z-0">
-                <video
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    preload="metadata"
-                    aria-label="Bakgrunnsvideo med AI-visualisering"
-                    className="w-full h-full object-cover"
-                >
-                    <source src="/hero/Make_cool_loop_202602101025.mp4" type="video/mp4" />
-                </video>
-                {/* Subtle gradient for text readability only at bottom/top */}
+                {isMobile ? (
+                    <img
+                        src="/hero/Whisk_iwy3ctnibtyxyzyl1czygtotgdz3qtlkrznx0cz.jpeg"
+                        alt=""
+                        className="w-full h-full object-cover"
+                    />
+                ) : (
+                    <video
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        preload="metadata"
+                        aria-label="Bakgrunnsvideo med AI-visualisering"
+                        className="w-full h-full object-cover"
+                    >
+                        <source src="/hero/Make_cool_loop_202602101025.mp4" type="video/mp4" />
+                    </video>
+                )}
                 <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/90" />
             </div>
 

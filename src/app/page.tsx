@@ -1,8 +1,10 @@
+import dynamic from "next/dynamic";
 import { AnimatedBackground } from "@/components/ui/AnimatedBackground";
 import { Hero } from "@/components/sections/Hero";
-import { IntroStats } from "@/components/sections/IntroStats";
-import { HorizontalScroll } from "@/components/sections/HorizontalScroll";
-import { FooterGrid } from "@/components/sections/FooterGrid";
+
+const IntroStats = dynamic(() => import("@/components/sections/IntroStats").then(m => m.IntroStats));
+const HorizontalScroll = dynamic(() => import("@/components/sections/HorizontalScroll").then(m => m.HorizontalScroll));
+const FooterGrid = dynamic(() => import("@/components/sections/FooterGrid").then(m => m.FooterGrid));
 
 export default function Home() {
   return (

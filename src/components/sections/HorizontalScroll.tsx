@@ -1,9 +1,10 @@
 "use client";
 
-import { useRef, useEffect, useState } from 'react';
+import { useRef, useEffect } from 'react';
 import Link from 'next/link';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useIsMobile } from '@/hooks/useIsMobile';
 gsap.registerPlugin(ScrollTrigger);
 
 const CARDS = [
@@ -32,20 +33,6 @@ const CARDS = [
         href: '/kategori/verktoy'
     }
 ];
-
-function useIsMobile() {
-    const [isMobile, setIsMobile] = useState(false);
-
-    useEffect(() => {
-        const mql = window.matchMedia('(max-width: 767px)');
-        setIsMobile(mql.matches);
-        const handler = (e: MediaQueryListEvent) => setIsMobile(e.matches);
-        mql.addEventListener('change', handler);
-        return () => mql.removeEventListener('change', handler);
-    }, []);
-
-    return isMobile;
-}
 
 export function HorizontalScroll() {
     const sectionRef = useRef<HTMLDivElement>(null);
