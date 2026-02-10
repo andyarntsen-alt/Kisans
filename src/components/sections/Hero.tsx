@@ -44,8 +44,7 @@ export function Hero() {
                     loop
                     muted
                     playsInline
-                    preload="auto"
-                    poster="/hero/poster.webp"
+                    preload="metadata"
                     aria-label="Bakgrunnsvideo med AI-visualisering"
                     className="w-full h-full object-cover"
                 >
